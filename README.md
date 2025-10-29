@@ -30,7 +30,7 @@ RUN IT LOCALLY
 
 1.  Clone this repo:
     ```bash
-    git clone [https://github.com/YOUR-USERNAME/lol-smash-or-pass.git](https://github.com/YOUR-USERNAME/lol-smash-or-pass.git)
+    git clone [https://github.com/Paprika03/lol-smash-or-pass.git](https://github.com/Paprika03/lol-smash-or-pass.git)
     ```
 2.  Open the `index.html` file in your browser.
 
