@@ -124,7 +124,7 @@ function startGame() {
 }
 
 /**
- * Afficher le champion actuel
+ * Afficher le champion actuel (MODIFIÉ AVEC SKINS ALÉATOIRES)
  */
 function displayChampion() {
     if (currentIndex >= filteredChampionKeys.length) {
@@ -138,8 +138,20 @@ function displayChampion() {
     const key = filteredChampionKeys[currentIndex];
     const champion = allChampionsData[key];
     
+    // --- NOUVELLE LOGIQUE POUR LES SKINS ALÉATOIRES ---
+    // 1. Obtenir le tableau des skins du champion
+    const skins = champion.skins;
+    
+    // 2. Choisir un index aléatoire dans ce tableau
+    const randomIndex = Math.floor(Math.random() * skins.length);
+    
+    // 3. Obtenir le numéro de ce skin (ex: 0, 1, 2, ...)
+    const skinNum = skins[randomIndex].num;
+    // --- FIN DE LA NOUVELLE LOGIQUE ---
+
     const img = new Image();
-    img.src = `${splashURL}${key}_0.jpg`;
+    // MODIFIÉ : Utiliser le 'skinNum' aléatoire au lieu de '_0'
+    img.src = `${splashURL}${key}_${skinNum}.jpg`; 
     
     img.onload = () => {
         champName.innerText = champion.name;
@@ -149,9 +161,20 @@ function displayChampion() {
         champImage.style.opacity = '1';
     };
 
+    // MODIFIÉ : Gestion d'erreur améliorée
     img.onerror = () => {
-        console.error(`Erreur de chargement pour l'image : ${key}`);
-        makeChoice('error'); 
+        console.error(`Erreur de chargement pour l'image : ${key}_${skinNum}.jpg`);
+        
+        // Plan de secours : Si le skin aléatoire ne se charge pas (rare, mais possible),
+        // on essaie de charger le skin par défaut (_0.jpg) avant d'abandonner.
+        if (img.src !== `${splashURL}${key}_0.jpg`) {
+            console.warn(`Tentative de repli sur le skin par défaut pour ${key}`);
+            img.src = `${splashURL}${key}_0.jpg`;
+        } else {
+            // Si même le skin par défaut échoue, on passe au suivant.
+            console.error(`Le skin par défaut pour ${key} a aussi échoué. On passe.`);
+            makeChoice('error'); // 'error' ne compte pas comme un smash
+        }
     };
 }
 
@@ -238,3 +261,4 @@ backToMenuBtn.addEventListener('click', reloadGame); // NOUVEAU
 
 // Démarrer le processus de chargement
 loadGame();
+
