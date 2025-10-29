@@ -4,8 +4,6 @@ The ultimate rating tool for the entire League of Legends roster. Who will you s
 
 [PLAY THE GAME LIVE HERE!](https://paprika03.github.io/League-of-Legends-shit-things/)**
 
-> **(Important!)** Don't forget to replace the link above with your own GitHub Pages URL after you deploy it!
-
 HOW IT WORKS
 
 This is a simple game built to answer life's most important questions.
@@ -28,4 +26,5 @@ JavaScript (ES6+):** For all the game logic, randomization, and `async/await` ca
 
 Have fun!
 GGWP
+
 
