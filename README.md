@@ -25,14 +25,7 @@ HTML5: For the game structure.
 CSS3: For all the styling, animations, and that "looks-like-LoL" feel.
 JavaScript (ES6+):** For all the game logic, randomization, and `async/await` calls to the Data Dragon API.
 
-RUN IT LOCALLY
 
+Have fun!
+GGWP
 
-1.  Clone this repo:
-    ```bash
-    git clone [https://github.com/YOUR-USERNAME/lol-smash-or-pass.git](https://github.com/YOUR-USERNAME/lol-smash-or-pass.git)
-    ```
-2.  Open the `index.html` file in your browser.
-
-
-That's it. Have fun!
