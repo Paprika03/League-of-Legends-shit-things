@@ -2,7 +2,7 @@
 
 The ultimate rating tool for the entire League of Legends roster. Who will you smash? Who will you pass?
 
-[PLAY THE GAME LIVE HERE!](https://YOUR-USERNAME.github.io/lol-smash-or-pass/)**
+[PLAY THE GAME LIVE HERE!](hhttps://paprika03.github.io/League-of-Legends-shit-things/)**
 
 > **(Important!)** Don't forget to replace the link above with your own GitHub Pages URL after you deploy it!
 
