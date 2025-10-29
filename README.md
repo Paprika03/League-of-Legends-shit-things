@@ -2,7 +2,7 @@
 
 The ultimate rating tool for the entire League of Legends roster. Who will you smash? Who will you pass?
 
-[PLAY THE GAME LIVE HERE!](https://YOUR-USERNAME.github.io/lol-smash-or-pass/)**
+[PLAY THE GAME LIVE HERE!](https://paprika03.github.io/League-of-Legends-shit-things/)**
 
 > **(Important!)** Don't forget to replace the link above with your own GitHub Pages URL after you deploy it!
 
@@ -33,5 +33,6 @@ RUN IT LOCALLY
     git clone [https://github.com/YOUR-USERNAME/lol-smash-or-pass.git](https://github.com/YOUR-USERNAME/lol-smash-or-pass.git)
     ```
 2.  Open the `index.html` file in your browser.
+
 
 That's it. Have fun!
