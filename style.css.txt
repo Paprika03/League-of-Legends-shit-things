@@ -1,0 +1,148 @@
+/* Import des polices LoL (optionnel mais stylé) */
+@import url('https://fonts.googleapis.com/css2?family=Beaufort+for+LoL:wght@700&family=Spiegel:wght@400;700&display=swap');
+
+body {
+    /* Polices de LoL */
+    font-family: 'Spiegel', Arial, sans-serif;
+    background-color: #010a13; /* Bleu très sombre de LoL */
+    color: #f0e6d2; /* "Parchemin" */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+#game-container {
+    width: 350px;
+    max-width: 90vw;
+    position: relative;
+}
+
+#champion-card {
+    background: #0a1428;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 0 0 0 2px #c8aa6e; /* Ombre + bordure or */
+    position: relative;
+    overflow: hidden;
+    height: 500px; /* Hauteur fixe pour la carte */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#loader {
+    font-family: 'Beaufort for LoL', serif;
+    font-size: 24px;
+    color: #c8aa6e;
+    position: absolute;
+}
+
+#champion-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Recadre l'image proprement */
+    display: block;
+    opacity: 0; /* Cachée au début, affichée par JS */
+    transition: opacity 0.3s ease-in-out;
+}
+
+#champion-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0));
+    color: white;
+    padding: 40px 20px 20px;
+    border-radius: 0 0 16px 16px;
+    text-shadow: 1px 1px 3px #000;
+}
+
+#champion-name {
+    font-family: 'Beaufort for LoL', serif;
+    font-weight: 700;
+    margin: 0;
+    font-size: 28px;
+    color: #f0e6d2;
+}
+
+#champion-title {
+    margin: 4px 0 0;
+    font-style: italic;
+    opacity: 0.9;
+    color: #c8aa6e;
+    font-size: 16px;
+}
+
+#buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+#pass-btn, #smash-btn {
+    font-size: 32px;
+    width: 80px;
+    height: 80px;
+    border: 2px solid #c8aa6e;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.1s ease-in-out, background-color 0.2s;
+    background-color: #1e2328; /* Gris-bleu foncé */
+}
+
+#pass-btn { color: #f44336; } /* Rouge */
+#smash-btn { color: #4caf50; } /* Vert */
+
+#pass-btn:hover {
+    background-color: #2a2f35;
+    transform: scale(1.1);
+}
+#smash-btn:hover {
+    background-color: #2a2f35;
+    transform: scale(1.1);
+}
+#pass-btn:active, #smash-btn:active {
+    transform: scale(1.05);
+}
+
+/* Écran des résultats */
+.hidden {
+    display: none !important;
+}
+
+#results {
+    text-align: center;
+    background: #0a1428;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 0 0 0 2px #c8aa6e;
+}
+#results h3 {
+    font-family: 'Beaufort for LoL', serif;
+    color: #c8aa6e;
+    font-size: 24px;
+    margin-top: 0;
+}
+
+#reload-btn {
+    font-family: 'Spiegel', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: 2px solid #c8aa6e;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #1e2328;
+    color: #f0e6d2;
+    transition: background-color 0.2s;
+    margin-top: 10px;
+}
+#reload-btn:hover {
+    background-color: #c8aa6e;
+    color: #010a13;
+}
