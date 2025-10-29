@@ -5,14 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LoL - Smash or Pass</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Beaufort+for+LoL:wght@400;700&family=Spiegel:wght@400;700&display=swap" rel="stylesheet">
-</head>
+    </head>
 <body>
 
     <div id="game-container">
-        <div id="champion-card">
+
+        <div id="game-setup">
+            <h2>Choisissez votre catégorie</h2>
+            <p>Filtrez les champions avant de commencer.</p>
+            <select id="category-select">
+                <option value="all">Tous les champions</option>
+                </select>
+            <button id="start-game-btn">Commencer</button>
+        </div>
+
+        <div id="champion-card" class="hidden">
             <div id="loader">Chargement...</div>
             <img id="champion-image" src="" alt="Champion Splash Art">
             <div id="champion-info">
@@ -21,7 +28,7 @@
             </div>
         </div>
 
-        <div id="buttons">
+        <div id="buttons" class="hidden">
             <button id="pass-btn" title="Pass">👎</button>
             <button id="smash-btn" title="Smash">🔥</button>
         </div>
@@ -29,6 +36,9 @@
         <div id="results" class="hidden">
             <h3>Partie terminée !</h3>
             <p>Vous avez "Smash" <span id="smash-count">0</span> champions sur <span id="total-count">0</span>.</p>
+            
+            <p id="user-type-result"></p>
+            
             <button id="reload-btn">Rejouer</button>
         </div>
     </div>
